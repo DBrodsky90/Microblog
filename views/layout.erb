@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/style.css">
+		<title>Document</title>
+	</head>
+	
+	<body>
+		
+		<header class="header">
+			<a href="/">
+				<img src="http://www.contrib.com/uploads/logo/microblog.png">
+			</a>
+		</header>
+
+		<nav class="nav">
+			<a href="/">
+				HOME
+			</a>
+				
+			<a href="/posts">
+				POSTS
+			</a>
+			
+			<a href="/authors">
+				AUTHORS
+			</a>
+			
+			<a href="/tags">
+				TAGS
+			</a>
+		</nav>
+		
+		<section>
+			<%= yield %>
+		</section>
+
+	</body>
+
+</html>

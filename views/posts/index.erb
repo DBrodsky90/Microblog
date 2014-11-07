@@ -1,0 +1,45 @@
+<% @posts.each do |post| %>
+
+	<article>
+		
+		<div class="posts_authors">
+			<a href="/authors/<%= post.author.id %>">
+				<img src="<%= post.author.image_url %>" class="portrait">
+			</a>	
+			<p>
+				Posted By: <a href="/authors/<%= post.author.id %>"><%= post.author.name %></a> 
+			</p>
+			<p>
+				Posted On : <%= post.date_created %>
+			</p>
+		</div>
+
+		<div class="posts_posts">
+			<a href="/posts/<%= post.id %>">	
+				<h2>
+					<%= post.title %>
+				</h2>
+			</a>
+
+			<h4>
+				<%= post.content %>
+			</h4>
+
+			<h6>
+				<% post.tags.each do |tag| %>
+					<h6>
+						Post's tags : 
+						<a href="/tags/<%= tag.id %>">
+							<%= tag.name %> 
+						</a>
+					</h6>
+				<% end %>
+			</h6>
+
+		</div>
+
+	</article>
+
+	<hr>
+
+<% end %>
