@@ -1,0 +1,31 @@
+<section>
+
+	<form action="/posts" method="POST" style="text-align: center;">
+		
+		<label><strong>Title</strong><br>
+			<input type="text" name="post[title]"><br>
+		</label><br>
+
+		<label><strong>Content</strong><br>
+			<input type="text" name="post[content]"><br>
+		</label><br>
+
+		<label><strong>Date Created</strong><br>
+			<input type="text" name="post[date_created]"><br>
+		</label><br>
+
+		<label><strong>Author</strong><br>
+			<select name="author[author_id]">
+				<% @authors.each do |author| %>
+					<option value="<%= author.id %>"><%= author.name %></option>			
+				<% end %>
+			</select>
+		</label><br>
+
+		<br>
+
+		<input type="submit" value="Submit">
+
+	</form>
+
+</section>

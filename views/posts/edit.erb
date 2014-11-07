@@ -1,0 +1,43 @@
+<section>
+
+	<form action="/posts/<%= @post.id %>" method="POST" style="text-align: center;">
+
+		<input type="hidden" name="_method" value="PUT">
+		
+		<label><strong>Title</strong><br>
+			<input type="text" name="post[title]" value="<%= @post.title %>"><br>
+		</label><br>
+
+		<label><strong>Content</strong><br>
+			<input type="text" name="post[content]" value="<%= @post.content %>"><br>
+		</label><br>
+
+		<label><strong>Date Created</strong><br>
+			<input type="text" name="post[date_created]" value="<%= @post.date_created %>"><br>
+		</label><br>
+
+		<label><strong>Author</strong><br>
+			<select name="author[author_id]">
+				<% @authors.each do |author| %>
+					<option <%= "selected" if author.name == @post.author.name %> value="<%= author.id %>"><%= author.name %></option>			
+				<% end %>
+			</select>
+		</label><br>
+
+		<br>
+
+		<input type="submit" value="Submit">
+
+	</form>
+
+	<br>
+
+	<form action="/posts/<%= @post.id %>" style="text-align: center;">
+
+		<input type="hidden" name="_method" value="DELETE">
+
+		<button>DELETE POST</button>
+		
+	</form>
+
+</section>
