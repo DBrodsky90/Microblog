@@ -1,0 +1,18 @@
+<nav class="nav" style="height: 50px; text-decoration: underline;">
+	<a href="/tags/new">
+		MAKE A NEW TAG
+	</a>
+</nav>
+
+<section>
+	
+	<% @tags.each do |tag| %>
+		<article class="tags">
+			<a href="/tags/<%= tag.id %>">
+				<h2><%= tag.name %></h2>
+			</a>
+			<a href="/tags/<%= tag.id %>/edit">Edit Tag</a>
+		</article>
+		<hr class="hrblack">
+	<% end %>
+</section>

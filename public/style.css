@@ -78,6 +78,23 @@
 	color: black;
 }
 
+.tags {
+	text-align: center;
+}
+
+.tags a {
+	color: black;
+}
+
+.tags a:hover {
+	color: #7DC000;
+}
+
+.hrblack {
+	background-color: black;
+	height: 5px;
+}
+
 section {
 	margin: 0 auto;
 	max-width: 1000px;

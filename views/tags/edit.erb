@@ -1,0 +1,32 @@
+<section>
+
+	<form action="/tags/<%= @tag.id %>" method="POST" style="text-align: center;">
+
+		<input type="hidden" name="_method" value="PUT">
+		
+		<label><strong>Tag name</strong><br>
+			<input type="text" name="tag[name]" value="<%= @tag.name %>"><br>
+		</label><br>
+
+
+		<br>
+
+		<input type="submit" value="Submit">
+
+	</form>
+
+	<br>
+	<br>
+
+	<form action="/tags/<%= @tag.id %>" method="POST" style="text-align: center;">
+
+		<input type="hidden" name="_method" value="DELETE">
+
+		<button>DELETE TAG</button>
+		
+	</form>
+
+</section>
+
+</section>
+

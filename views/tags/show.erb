@@ -1,0 +1,35 @@
+<section>
+	<h2 class="authors_posts_heading">
+		POSTS WITH THIS TAG
+	</h2>
+
+
+	<hr>
+
+	<article>
+		
+		<% @tag.posts.each do |post| %>
+		
+			<div class="authors_posts">
+				<a href="/posts/<%= post.id %>">
+					<h2>
+						<%= post.title %>
+					</h2>
+				</a>	
+				<h4>
+					<%= post.content %>
+				</h4>
+				<p>
+					<strong>Posted on : <%= post.date_created %></strong>
+				</p>
+				<p>
+					<strong>Posted by : <%= post.author.name %></strong>
+				</p>		
+			</div>
+
+			<hr>
+
+		<% end %>
+
+	</article>
+</section>
