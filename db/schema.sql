@@ -29,3 +29,4 @@ CREATE TABLE posts_tags (
 	post_id INTEGER REFERENCES posts,
 	tag_id INTEGER REFERENCES tags
 );
+

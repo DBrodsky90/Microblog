@@ -86,3 +86,4 @@ tag3 = Tag.create({
 tag1.posts.push(p1)
 tag2.posts.push(p2)
 tag3.posts.push(p3)
+

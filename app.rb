@@ -27,3 +27,4 @@ ActiveRecord::Base.establish_connection({
 })
 
 after { ActiveRecord::Base.connection.close }
+

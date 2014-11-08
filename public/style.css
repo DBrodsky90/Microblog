@@ -65,6 +65,19 @@
 	color: #7DC000;
 }
 
+.authors_posts_heading {
+	font-size: 40px;
+	text-align: center;
+}
+
+.authors_posts {
+	text-align: center;
+}
+
+.authors_posts a {
+	color: black;
+}
+
 section {
 	margin: 0 auto;
 	max-width: 1000px;
@@ -87,7 +100,4 @@ hr {
 	background-color: #7DC000;
 	height: 5px;
 }
-
-
-
 

@@ -1,0 +1,39 @@
+<nav class="nav" style="height: 50px; text-decoration: underline;">
+	<a href="/authors/new">
+		CREATE A NEW AUTHOR
+	</a>
+</nav>
+
+
+<section>
+	<% @authors.each do |author| %>
+
+		<article>
+			
+			<div class="posts_authors">
+				<a href="/authors/<%= author.id %>">
+					<img src="<%= author.image_url %>" class="portrait">
+				</a>	
+			</div>
+
+			<div class="posts_posts">
+				<a href="/authors/<%= author.id %>">	
+					<h2>
+						<%= author.name %>
+					</h2>
+				</a>
+
+				<h4>
+					<%= author.description %>
+				</h4>
+
+
+			</div>
+
+		</article>
+
+		<hr>
+
+	<% end %>
+</section>	
+

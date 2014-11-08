@@ -44,3 +44,12 @@ put '/posts/:id' do
 end
 
 #DELETE
+delete '/posts/:id' do
+	post = Post.find(params[:id])
+	if post.destroy
+		redirect "/posts"
+	else
+		redirect "/posts/#{post.id}/edit"
+	end
+end
+

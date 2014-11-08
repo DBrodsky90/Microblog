@@ -1,0 +1,67 @@
+<section>
+
+		<article>
+			
+			<div class="posts_authors" style="height:300px;">
+				<a href="/authors/<%= @author.id %>">
+					<img src="<%= @author.image_url %>" class="portrait">
+				</a>	
+			</div>
+
+			<div class="posts_posts" style="height:300px;">
+				<a href="/authors/<%= @author.id %>">	
+					<h2>
+						<%= @author.name %>
+					</h2>
+				</a>
+
+				<h4>
+					<%= @author.description %>
+				</h4>
+
+				<h6>
+					<a href="/authors/<%= @author.id %>/edit">
+						Edit Author
+					</a>
+				</h6>
+
+			</div>
+
+		</article>
+
+		<hr>
+
+	
+			<h2 class="authors_posts_heading">
+					POSTS BY THIS AUTHOR
+			</h2>
+		
+
+		<hr>
+
+		<article>
+			
+			<% @author.posts.each do |post| %>
+			
+				<div class="authors_posts">
+					<a href="/posts/<%= post.id %>">
+						<h2>
+							<%= post.title %>
+						</h2>
+					</a>	
+					<h4>
+						<%= post.content %>
+					</h4>
+					<p>
+						<strong>Posted on : <%= post.date_created %></strong>
+					</p>	
+				</div>
+
+				<hr>
+
+			<% end %>
+
+		</article>
+
+</section>	
+

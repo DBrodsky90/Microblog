@@ -15,7 +15,7 @@
 		</label><br>
 
 		<label><strong>Author</strong><br>
-			<select name="author[author_id]">
+			<select name="post[author_id]">
 				<% @authors.each do |author| %>
 					<option value="<%= author.id %>"><%= author.name %></option>			
 				<% end %>
@@ -29,3 +29,4 @@
 	</form>
 
 </section>
+

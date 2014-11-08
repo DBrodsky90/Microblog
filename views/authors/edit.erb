@@ -1,0 +1,37 @@
+<section>
+
+	<form action="/authors/<%= @author.id %>" method="POST" style="text-align: center;">
+
+		<input type="hidden" name="_method" value="PUT">
+		
+		<label><strong>Name</strong><br>
+			<input type="text" name="author[name]" value="<%= @author.name %>"><br>
+		</label><br>
+
+		<label><strong>Description</strong><br>
+			<input type="text" name="author[description]" value="<%= @author.description %>"><br>
+		</label><br>
+
+		<label><strong>Image URL</strong><br>
+			<input type="text" name="author[image_url]" value="<%= @author.image_url %>"><br>
+		</label><br>
+
+
+		<br>
+
+		<input type="submit" value="Submit">
+
+	</form>
+
+	<br>
+
+	<form action="/authors/<%= @author.id %>" method="POST" style="text-align: center;">
+
+		<input type="hidden" name="_method" value="DELETE">
+
+		<button>DELETE AUTHOR</button>
+		
+	</form>
+
+</section>
+
