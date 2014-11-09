@@ -33,15 +33,14 @@
 					<%= post.content %>
 				</h4>
 
-				<h6>
+				<h6>		
+					Post's tags : <br>
 					<% post.tags.each do |tag| %>
-						<h6>
-							Post's tags : 
 							<a href="/tags/<%= tag.id %>">
 								<%= tag.name %> 
 							</a>
-						</h6>
-					<% end %>
+							 <br>
+					<% end %>						
 				</h6>
 
 			</div>
