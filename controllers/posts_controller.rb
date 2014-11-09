@@ -6,6 +6,7 @@ end
 
 #NEW
 get '/posts/new' do
+	@tags = Tag.all
 	@authors = Author.all
 	erb :'posts/new'
 end
@@ -19,18 +20,20 @@ end
 #EDIT
 get '/posts/:id/edit' do
 	@authors = Author.all
+	@tags = Tag.all
 	@post = Post.find(params[:id])
 	erb :'posts/edit'  
 end
 
 #CREATE
 post '/posts' do 
-	post = Post.create(params[:post])
-	if post.save
-		redirect "/posts"
-	else
-		redirect "/posts/new"
+	post = Post.new(params[:post])
+	post.save
+	params[:tags].each do |tag_id|
+		tag = Tag.find(tag_id)
+		post.tags.push(tag)
 	end
+	redirect "/posts/#{post.id}"
 end
 
 #UPDATE

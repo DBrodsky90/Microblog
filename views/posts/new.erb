@@ -20,6 +20,14 @@
 
 		<br>
 
+		<label><strong>Tags</strong><br>
+			<% @tags.each do |tag| %>
+			<input type="checkbox" name="tags[]" value="<%= tag.id %>"><%= tag.name %><br>
+			<% end %>
+		</label>
+
+		<br>
+
 		<input type="submit" value="Submit">
 
 	</form>
