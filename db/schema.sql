@@ -20,7 +20,8 @@ CREATE TABLE posts (
 	id SERIAL PRIMARY KEY,
 	title varchar(255),
 	content text,
-	date_created varchar(255),
+	created_at timestamp,
+	updated_at timestamp,
 	author varchar(255),
 	author_id INTEGER REFERENCES authors
 );

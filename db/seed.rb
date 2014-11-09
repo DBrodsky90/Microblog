@@ -28,7 +28,6 @@ post_content = ["Hello my name is Barrack Obama and this is my first post on the
 								"Hello my name is Vladimir Putin and this is my first post on the blog!",
 								"Hello my name is Bruce Wayne and this is my first post on the blog!"]
 
-post_datecreated = ["January 21 2014", "June 5 2014", "October 20 2014"]
 
 post_author = ["Barrack Obama", "Vladimir Putin", "Bruce Wayne"]
 
@@ -56,19 +55,16 @@ wayne = Author.create({
 p1 = Post.create({
 	title: post_titles[0],
 	content: post_content[0],
-	date_created: post_datecreated[0],
 	author: obama
 })
 p2 = Post.create({
 	title: post_titles[1],
 	content: post_content[1],
-	date_created: post_datecreated[1],
 	author: putin
 })
 p3 = Post.create({
 	title: post_titles[2],
 	content: post_content[2],
-	date_created: post_datecreated[2],
 	author: wayne
 })
 
