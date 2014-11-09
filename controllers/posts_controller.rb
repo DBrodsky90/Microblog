@@ -39,11 +39,13 @@ end
 #UPDATE
 put '/posts/:id' do
 	post = Post.find(params[:id])
-	if post.update(params[:post])
-		redirect "/posts/#{post.id}"
-	else 
-		redirect "/posts/#{post.id}/edit"
+	post.update(params[:post])
+	post.tags.destroy_all
+	params[:tags].each do |tag_id|
+		tag = Tag.find(tag_id)
+		post.tags.push(tag)
 	end
+	redirect "/posts/#{post.id}"
 end
 
 #DELETE
