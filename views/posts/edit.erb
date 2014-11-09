@@ -22,6 +22,12 @@
 
 		<br>
 
+		<label><strong>Tags</strong><br>
+			<% @tags.each do |tag| %>
+			<input <%= "checked" if @post.tags.include?(tag) %> type="checkbox" name="tags[]" value="<%= tag.id %>"><%= tag.name %><br>
+			<% end %>
+		</label>
+
 		<input type="submit" value="Submit">
 
 	</form>
