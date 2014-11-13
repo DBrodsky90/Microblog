@@ -24,7 +24,7 @@
 
 		<label><strong>Tags</strong><br>
 			<% @tags.each do |tag| %>
-			<input <%= "checked" if @post.tags.include?(tag) %> type="checkbox" name="tags[]" value="<%= tag.id %>"><%= tag.name %><br>
+				<input <%= "checked" if @post.tags.include?(tag) %> type="checkbox" name="tags[]" value="<%= tag.id %>"><%= tag.name %><br>
 			<% end %>
 		</label>
 
